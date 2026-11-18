@@ -13,7 +13,7 @@ output, the mistakes we hit, and a quick-revision section at the end.
 | Ch. | Title | Code | Status |
 |---|---|---|---|
 | 1 | [Your first AI call](01-first-ai-call.md) | `src/lessons/01-hello.ts` | ✅ |
-| 2 | Controlling the AI: system instructions and temperature | | ⏳ |
+| 2 | [Controlling the AI: system instructions and temperature](02-system-instructions-and-temperature.md) | `src/lessons/02-system-and-temperature.ts` | ✅ |
 | 3 | Chat with memory: message history and the context window | | ⏳ |
 | 4 | Getting JSON back: structured output | | ⏳ |
 | 5 | Streaming responses | | ⏳ |
@@ -43,3 +43,10 @@ that explains it properly.
 | **Context window** | The maximum number of tokens a model can handle in one call. | [1](01-first-ai-call.md#6-tokens) |
 | **Latency** | How long the model takes to reply. | [1](01-first-ai-call.md#8-latency) |
 | **503 / 429** | "Model overloaded" / "you're sending too many requests (rate limit)". | [1](01-first-ai-call.md#9-ai-apis-fail-often) |
+| **System instruction** (system prompt) | The developer's standing rules (role, scope, format, tone), sent with every call. Users don't see it. | [2](02-system-instructions-and-temperature.md#1-the-system-instruction) |
+| **Prompt engineering** | Writing and testing instructions until the model behaves the way you want. | [2](02-system-instructions-and-temperature.md#1-the-system-instruction) |
+| **Guardrail** | A rule that keeps the AI in scope or safe. In a prompt it's soft; real enforcement belongs in code. | [2](02-system-instructions-and-temperature.md#2-guardrails-and-why-theyre-not-security) |
+| **Prompt injection** | A user (or data) tricking the model into ignoring its instructions. | [2](02-system-instructions-and-temperature.md#2-guardrails-and-why-theyre-not-security) |
+| **Temperature** | How random the model's word choices are. 0 = predictable, higher = more varied. | [2](02-system-instructions-and-temperature.md#4-temperature) |
+| **maxOutputTokens** | A hard cap on reply length; the reply is cut off if it's reached. | [2](02-system-instructions-and-temperature.md#8-other-settings-youll-see) |
+| **topP / topK / seed** | Other randomness settings. Usually left at defaults. | [2](02-system-instructions-and-temperature.md#8-other-settings-youll-see) |
